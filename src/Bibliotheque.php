@@ -13,11 +13,11 @@ class Bibliotheque
     {
     }
 
-    public function ajout(Livre $livre)
+    public function ajout(ObjetLoisir $objetLoisir)
     {
         foreach ($this->etageres as $etagere) {
             try {
-                $etagere->addLivre($livre);
+                $etagere->addObjetLoisir($objetLoisir);
                 return;
             } catch (NotEnoughPlaceException $e) {
             }

@@ -2,14 +2,25 @@
 
 namespace Dvilleneuve\AppFormationPhpPoo;
 
-class Livre
+class Livre extends ObjetLoisir
 {
     public function __construct(
-        private string $ean,
-        private string $titre,
-        private int    $nbPage,
-        private Auteur $author,
+        string      $ean,
+        string      $titre,
+        Auteur      $author,
+        private int $nbPage,
     )
     {
+        parent::__construct($ean, $titre, $author);
     }
+
+    /**
+     * @return int
+     */
+    public function getNbPage(): int
+    {
+        return $this->nbPage;
+    }
+
+
 }

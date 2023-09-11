@@ -5,9 +5,9 @@ namespace Dvilleneuve\AppFormationPhpPoo;
 class Etagere
 {
     /**
-     * @var Livre[]
+     * @var ObjetLoisir[]
      */
-    private array $livres;
+    private array $objetsLoisirs;
 
     public function __construct(
         private int $nbPlace
@@ -18,9 +18,9 @@ class Etagere
     /**
      * @throws NotEnoughPlaceException
      */
-    public function addLivre(Livre $livre): void {
+    public function addObjetLoisir(ObjetLoisir $objetLoisir): void {
         if ($this->estRempli()) {
-            $this->livres[] = $livre;
+            $this->objetsLoisirs[] = $objetLoisir;
         } else {
             throw new NotEnoughPlaceException();
         }
@@ -28,6 +28,6 @@ class Etagere
 
     private function estRempli(): bool
     {
-        return count($this->livres) >= $this->nbPlace;
+        return count($this->objetsLoisirs) >= $this->nbPlace;
     }
 }
