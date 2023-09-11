@@ -19,10 +19,15 @@ class Etagere
      * @throws NotEnoughPlaceException
      */
     public function addLivre(Livre $livre): void {
-        if (count($this->livres) < $this->nbPlace - 1) {
+        if ($this->estRempli()) {
             $this->livres[] = $livre;
         } else {
             throw new NotEnoughPlaceException();
         }
+    }
+
+    private function estRempli(): bool
+    {
+        return count($this->livres) >= $this->nbPlace;
     }
 }
