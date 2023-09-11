@@ -1,0 +1,15 @@
+{
+    "name": "dvilleneuve/app.formation.php_poo",
+    "autoload": {
+        "psr-4": {
+            "Dvilleneuve\\AppFormationPhpPoo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Damien Villeneuve",
+            "email": "d.villeneuve@beapp.fr"
+        }
+    ],
+    "require": {}
+}

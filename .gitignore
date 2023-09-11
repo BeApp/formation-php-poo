@@ -1,0 +1,22 @@
+# OS junk files
+.DS_Store
+[Tt]humbs.db
+
+# Temp files
+*~
+
+# IntelliJ IDEA
+.idea
+*.iml
+
+# Gradle
+build
+.gradle
+
+
+# PHP quality tools
+.php_cs.cache
+
+.unison*
+
+vendor
